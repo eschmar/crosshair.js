@@ -101,9 +101,10 @@
                 this.marker = this.element.find('.crosshair-marker');
             };
     
-            var dimension = this.marker.width();
-            this.marker.css('left', this.coords.x-(dimension/2));
-            this.marker.css('top', this.coords.y-(dimension/2));
+            var width = this.marker.width();
+            var height = this.marker.height();
+            this.marker.css('left', this.coords.x-(width/2));
+            this.marker.css('top', this.coords.y-(height/2));
 
             // trigger callback
             this.options.callback(this);
