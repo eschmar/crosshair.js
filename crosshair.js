@@ -33,20 +33,20 @@
 
     Plugin.prototype = {
         init: function() {
+            var app = this;
             this.spawnCrosshair();
+
+            // hide crosshair and legend onmouseleave
+            this.element.hover(function() {
+                app.element.find('.hair, .crosshair-legend').show();
+            }, function() {
+                app.element.find('.hair, .crosshair-legend').hide();
+            });
         },
 
         spawnCrosshair: function() {
-            var app = this;
             this.element.append('<div class="hair hair-vertical"></div>');
             this.element.append('<div class="hair hair-horizontal"></div>');
-
-            // hide crosshair onmouseleave
-            this.element.hover(function() {
-                app.element.find('.hair').show();
-            }, function() {
-                app.element.find('.hair').hide();
-            });
 
             this.initCrosshair();
         },
