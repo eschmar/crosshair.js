@@ -3,6 +3,9 @@
   position: relative;
   overflow: hidden;
 }
+.crosshair img {
+  width: 100%;
+}
 .crosshair .hair {
   display: none;
   position: absolute;
