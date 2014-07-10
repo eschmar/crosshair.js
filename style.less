@@ -1,0 +1,45 @@
+.crosshair {
+    display: block;
+    position: relative;
+    overflow: hidden;
+
+    .hair {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-top: -3px;
+        margin-left: -2px;
+        background: transparent;
+        border-top: 3px solid black;
+        border-left: 3px solid black;
+        pointer-events: none;
+        z-index: 2;
+        opacity: 0.5;
+
+        &.hair-vertical { height: 100%; }
+        &.hair-horizontal { width: 100%; }
+    }
+
+    .crosshair-legend, .crosshair-marker {
+        display: block;
+        position: absolute;
+    }
+
+    .crosshair-legend {
+        top: 0;
+        left: 0;
+        background-color: black;
+        background-color: rgba(0,0,0,0.4);
+        color: white;
+        font-size: 10px;
+        padding: 3px;
+    }
+
+    .crosshair-marker {
+        width: 30px;
+        height: 30px;
+        background-color: #aa1100;
+        opacity: 0.5;
+    }
+}

@@ -1,0 +1,10 @@
+/*
+ *  crosshair.js - v0.1.0
+ *  Crosshair any dom element.
+ *  https://github.com/eschmar/crosshair
+ *
+ *  @author: 	Marcel Eschmann, @eschmar
+ *  @license: 	MIT License
+ */
+ 
+;(function(i,t,e,s){var n,r,o,a,h={wrap:true,callback:function(i){console.log(i.pct)}};function c(t,e){this.options=i.extend({},h,e);this._defaults=h;if(this.options.wrap){i(t).wrap('<div class="crosshair"></div>');this.element=i(t).parent()}else{this.element=i(t).addClass("crosshair")}this.coords={x:null,y:null};this.pct={x:null,y:null};this.init()}c.prototype={init:function(){this.spawnCrosshair()},spawnCrosshair:function(){var i=this;this.element.append('<div class="hair hair-vertical"></div>');this.element.append('<div class="hair hair-horizontal"></div>');this.element.hover(function(){i.element.find(".hair").show()},function(){i.element.find(".hair").hide()});this.initCrosshair()},initCrosshair:function(){var t=this;i(this.element).on("mousemove touchmove",function(i){var e,s,n;e=t.element.offset();s=i.clientX-e.left;n=i.clientY-e.top;t.coords.x=s;t.coords.y=n;t.element.find(".hair.hair-horizontal").css("top",n);t.element.find(".hair.hair-vertical").css("left",s);t.pct.x=(100/t.element.width()*t.coords.x).toFixed(2);t.pct.y=(100/t.element.height()*t.coords.y).toFixed(2);t.updateLegend();i.stopPropagation()});this.element.click(function(i){t.setMarker();i.stopPropagation()})},updateLegend:function(){if(!this.legend){this.element.append('<div class="crosshair-legend"></div>');this.legend=this.element.find(".crosshair-legend")}this.legend.html("X: "+this.pct.x+"%, Y: "+this.pct.y+"%")},setMarker:function(){if(!this.marker){this.element.append('<div class="crosshair-marker"></div>');this.marker=this.element.find(".crosshair-marker")}var i=this.marker.width();this.marker.css("left",this.coords.x-i/2);this.marker.css("top",this.coords.y-i/2);this.options.callback(this)}};i.fn["crosshair"]=function(t){return this.each(function(){if(!i.data(this,"crosshair")){i.data(this,"crosshair",new c(this,t))}})}})(jQuery,window,document);
