@@ -11,6 +11,8 @@
 	// set default config
 	var coords, pct, legend, marker, defaults = {
 		wrap: true,
+		legend: true,
+		marker: '<div class="crosshair-marker"></div>',
 		callback: function(crosshair) { console.log(crosshair.pct); }
 	};
 
@@ -79,6 +81,12 @@
 		},
 
 		updateLegend: function() {
+			if (!this.options.legend) {
+				this.element.find('.crosshair-legend').remove();
+				this.legend = null;
+				return;
+			};
+
 			if (!this.legend) {
 				this.element.append('<div class="crosshair-legend"></div>');
 				this.legend = this.element.find('.crosshair-legend');
@@ -89,7 +97,7 @@
 
 		setMarker: function() {
 			if (!this.marker) {
-				this.element.append('<div class="crosshair-marker"></div>');
+				this.element.append(this.options.marker);
 				this.marker = this.element.find('.crosshair-marker');
 			};
 	
