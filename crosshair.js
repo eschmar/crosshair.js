@@ -96,14 +96,24 @@
         },
 
         setMarker: function() {
+            // check for multiple or preset markers
+            if (this.element.find('.crosshair-marker').length > 1) {
+                this.element.find('.crosshair-marker').remove();
+                this.marker = null;
+            }else if (!this.marker && this.element.find('.crosshair-marker').length === 1) {
+                this.marker = this.element.find('.crosshair-marker');
+            };
+
+            // inject new marker
             if (!this.marker) {
                 this.element.append(this.options.marker);
                 this.marker = this.element.find('.crosshair-marker');
             };
     
+            // update marker position
             var width = this.marker.width();
             var height = this.marker.height();
-            this.marker.css('left', this.coords.x-(width/2));
+            this.marker.css('left', 0);
             this.marker.css('top', this.coords.y-(height/2));
 
             // trigger callback
