@@ -7,7 +7,6 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/crosshair.css" media="print" />
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -35,17 +34,38 @@
           <p>A jQuery plugin that let's you lay a crosshair over a dom element (for whatever reason) and receive its relative position onclick.</p>
 
 <h2>
-<a name="requirements" class="anchor" href="#requirements"><span class="octicon octicon-link"></span></a>Requirements</h2>
+<a name="why" class="anchor" href="#why"><span class="octicon octicon-link"></span></a>why</h2>
 
-<ul>
-<li>jQuery</li>
-</ul><h2>
-<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
-
-<p>todo</p>
+<p>I needed a simple way of letting the user choose the most important part of an image as part of an app.</p>
 
 <h2>
-<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
+<a name="demo" class="anchor" href="#demo"><span class="octicon octicon-link"></span></a>demo</h2>
+
+<p><img src="http://eschmar.github.io/crosshair.js/images/minions-ymca.jpg" alt="YMCA Minions - copyright universal pictures"></p>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>usage</h2>
+
+<div class="highlight highlight-JavaScript"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">'#demo-img'</span><span class="p">).</span><span class="nx">crosshair</span><span class="p">();</span>
+</pre></div>
+
+<h2>
+<a name="options" class="anchor" href="#options"><span class="octicon octicon-link"></span></a>options</h2>
+
+<p>key|value (default)|description
+-|-|-
+legend|boolean (true)|show the current position of your mouse if hovering the element
+marker|string ('</p><div></div>')|marker html template
+callback|function|this method will be triggered after you've clicked and the marker has been set
+wrap|boolean (true)|experimental switch to apply the crosshair directly on the chosen element if set to false
+
+<h2>
+<a name="notes" class="anchor" href="#notes"><span class="octicon octicon-link"></span></a>notes</h2>
+
+<p>This is a first version and has only been tested on the latest version of Firefox (hence v0.1), as this was the only requirement for my use case. Hopefully it will be of use to somebody. </p>
+
+<h2>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>license</h2>
 
 <p>MIT License</p>
         </section>
@@ -58,10 +78,5 @@
         
       </div>
     </div>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script type="text/javascript" src="javascripts/crosshair-min.js"></script>
-    <script>
-      $('#demo-img').crosshair();
-    </script>
   </body>
 </html>
