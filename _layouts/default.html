@@ -29,7 +29,7 @@
           <a href="https://github.com/eschmar/crosshair.js" id="view-on-github" class="button"><span>View on GitHub</span></a>
         </section>
         <hr>
-        
+
         {{ content }}
 
         <footer>
@@ -41,7 +41,12 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript" src="javascripts/crosshair-min.js"></script>
     <script>
-      $('#demo-img').crosshair();
+      $('#demo-img').crosshair({
+          callback: function(crosshair) {
+              console.log("Pixel coordinates: ("+crosshair.coords.x+"|"+crosshair.coords.y+")");
+              console.log("Relative position: X: "+crosshair.pct.x+"%, Y: "+crosshair.pct.y+"%");
+          }
+      });
     </script>
   </body>
 </html>
