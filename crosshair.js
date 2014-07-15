@@ -113,7 +113,7 @@
             // update marker position
             var width = this.marker.width();
             var height = this.marker.height();
-            this.marker.css('left', this.coords.y-(width/2));
+            this.marker.css('left', this.coords.x-(width/2));
             this.marker.css('top', this.coords.y-(height/2));
 
             // trigger callback
