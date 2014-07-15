@@ -1,49 +1,57 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Crosshair.js by eschmar</title>
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Crosshair.js by eschmar</title>
+        <meta name="description" content="jQuery crosshair overlay">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/amelia.bootstrap.min.css">
+        <link rel="stylesheet" href="css/crosshair.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <link rel="stylesheet" href="stylesheets/crosshair.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Crosshair.js</h1>
-        <h2>jQuery crosshair overlay</h2>
-        <p></p>
+        <header>
+          <h1>Crosshair.js</h1>
+          <h2>jQuery crosshair overlay</h2>
+          <p></p>
+          <ul>
+            <li><a href="https://github.com/eschmar/crosshair.js/zipball/master">Download <strong>ZIP File</strong></a></li>
+            <li><a href="https://github.com/eschmar/crosshair.js/tarball/master">Download <strong>TAR Ball</strong></a></li>
+            <li><a href="https://github.com/eschmar/crosshair.js">View On <strong>GitHub</strong></a></li>
+          </ul>
+        </header>
 
-        <p class="view"><a href="https://github.com/eschmar/crosshair.js">View the Project on GitHub <small>eschmar/crosshair.js</small></a></p>
+        <section>{{ content }}</section>
 
-        <ul>
-          <li><a href="https://github.com/eschmar/crosshair.js/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/eschmar/crosshair.js/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/eschmar/crosshair.js">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>{{ content }}</section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/eschmar">eschmar</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script type="text/javascript" src="javascripts/crosshair-min.js"></script>
-    <script>
-      $('#demo-img').crosshair({
-          callback: function(crosshair) {
-              console.log("Pixel coordinates: ("+crosshair.coords.x+"|"+crosshair.coords.y+")");
-              console.log("Relative position: X: "+crosshair.pct.x+"%, Y: "+crosshair.pct.y+"%");
-          }
-      });
-    </script>
-  </body>
+        <hr>
+
+        <footer>
+          <p>This project is maintained by <a href="https://github.com/eschmar">eschmar</a></p>
+          <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+        </footer>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script src="js/crosshair-min.js"></script>
+
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+          ga('create', 'UA-38601857-3', 'auto');
+          ga('send', 'pageview');
+        </script>
+    </body>
 </html>
