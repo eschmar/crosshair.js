@@ -58,3 +58,5 @@
   height: 336px;
   margin: 0 auto;
 }
+
+.navbar-right .octicon { margin-right: 10px; }
