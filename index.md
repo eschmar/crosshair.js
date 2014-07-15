@@ -7,10 +7,7 @@ A jQuery plugin that let's you lay a crosshair over a dom element (for whatever 
 I needed a simple way of letting the user choose the most important part of an image as part of an app.
 
 ## demo
-<div id="demo-wrapper">
-  ![YMCA Minions - copyright universal pictures](http://eschmar.github.io/crosshair.js/images/minions-ymca.jpg)
-  {: #demo-wrapper}
-</div>
+<img id="demo-img" src="http://eschmar.github.io/crosshair.js/images/minions-ymca.jpg" alt="YMCA Minions - copyright universal pictures">
 
 ## usage
 ~~~ javascript
