@@ -23,7 +23,7 @@ $('#demo-img').crosshair({
 
 ## options
 
-{:.table .table-striped}
+{:.table .table-striped .table-bordered}
 |key|value (default)|description|
 |---|---|---|
 |legend|boolean (true)|Show the current position of your mouse if hovering the element|
