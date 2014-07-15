@@ -9,13 +9,13 @@
         <title>Crosshair.js by eschmar</title>
         <meta name="description" content="jQuery crosshair overlay">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/amelia.bootstrap.min.css">
         <link rel="stylesheet" href="css/crosshair.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
+      <div class="container">
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -24,11 +24,9 @@
           <h1>Crosshair.js</h1>
           <h2>jQuery crosshair overlay</h2>
           <p></p>
-          <ul>
-            <li><a href="https://github.com/eschmar/crosshair.js/zipball/master">Download <strong>ZIP File</strong></a></li>
-            <li><a href="https://github.com/eschmar/crosshair.js/tarball/master">Download <strong>TAR Ball</strong></a></li>
-            <li><a href="https://github.com/eschmar/crosshair.js">View On <strong>GitHub</strong></a></li>
-          </ul>
+          <a href="https://github.com/eschmar/crosshair.js/zipball/master" class="btn btn-primary">Download <strong>ZIP File</strong><</a>
+          <a href="https://github.com/eschmar/crosshair.js/tarball/master" class="btn btn-default">Download <strong>TAR Ball</strong></a>
+          <a href="https://github.com/eschmar/crosshair.js" class="btn btn-default">View On <strong>GitHub</strong></a>
         </header>
 
         <section>{{ content }}</section>
@@ -46,6 +44,15 @@
         <script src="js/crosshair-min.js"></script>
 
         <script>
+          $('#demo-img').crosshair({
+              callback: function(crosshair) {
+                  console.log("Pixel coordinates: ("+crosshair.coords.x+"|"+crosshair.coords.y+")");
+                  console.log("Relative position: X: "+crosshair.pct.x+"%, Y: "+crosshair.pct.y+"%");
+              }
+          });
+        </script>
+
+        <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
           m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -53,5 +60,6 @@
           ga('create', 'UA-38601857-3', 'auto');
           ga('send', 'pageview');
         </script>
+      </div>
     </body>
 </html>
