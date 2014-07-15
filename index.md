@@ -7,7 +7,9 @@ A jQuery plugin that let's you lay a crosshair over a dom element (for whatever 
 I needed a simple way of letting the user choose the most important part of an image as part of an app.
 
 ## demo
-<img id="demo-img" src="http://eschmar.github.io/crosshair.js/images/minions-ymca.jpg" alt="YMCA Minions - copyright universal pictures">
+<div id="demo-wrapper">
+  <img id="demo-img" src="http://eschmar.github.io/crosshair.js/images/minions-ymca.jpg" alt="YMCA Minions - copyright universal pictures">
+</div>
 
 ## usage
 ~~~ javascript
@@ -20,12 +22,12 @@ $('#demo-img').crosshair({
 ~~~
 
 ## options
-key|value (default)|description
----|---|---
-legend|boolean (true)|Show the current position of your mouse if hovering the element
-marker|string ('<div class="crosshair-marker"></div>')|Marker HTML template.
-callback|function(crosshair){}|This method will be triggered after you've clicked and the marker has been set. Access coordinates through `crosshair.coords` and  `crosshair.pct`.
-wrap|boolean (true)|Experimental switch to apply the crosshair directly on the chosen element if set to false.
+|key|value (default)|description
+|---|---|---
+|legend|boolean (true)|Show the current position of your mouse if hovering the element
+|marker|string ('<div class="crosshair-marker"></div>')|Marker HTML template.
+|callback|function(crosshair){}|This method will be triggered after you've clicked and the marker has been set. Access coordinates through `crosshair.coords` and  `crosshair.pct`.
+|wrap|boolean (true)|Experimental switch to apply the crosshair directly on the chosen element if set to false.
 {: .table .table-striped}
 
 ## notes
