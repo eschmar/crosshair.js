@@ -60,3 +60,12 @@
 }
 
 .navbar-right .octicon { margin-right: 10px; }
+
+h2 {
+  font-size: 32px;
+  margin: 0;
+  background-color: #F8F8F8;
+  padding: 8px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
