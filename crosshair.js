@@ -57,8 +57,8 @@
                 // calculate relative position
                 var offset, left, top;
                 offset = app.element.offset();
-                left = event.clientX - offset.left;
-                top = event.clientY - offset.top;
+                left = event.pageX - offset.left;
+                top = event.pageY - offset.top;
 
                 // update position
                 app.coords.x = left;
