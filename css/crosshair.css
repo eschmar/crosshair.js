@@ -51,7 +51,7 @@
   opacity: 0.5;
 }
 
-#demo {
+#demo-wrapper {
   display: block;
   position: relative;
   width: 620px;
