@@ -22,6 +22,7 @@ $('#demo-img').crosshair({
 ~~~
 
 ## options
+
 {:.table .table-striped}
 |key|value (default)|description|
 |---|---|---|
