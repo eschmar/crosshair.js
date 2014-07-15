@@ -13,7 +13,7 @@ I needed a simple way of letting the user choose the most important part of an i
 </div>
 
 ## usage
-```JavaScript
+``` javascript
 $('#demo-img').crosshair({
     callback: function(crosshair) {
         console.log("Pixel coordinates: ("+crosshair.coords.x+"|"+crosshair.coords.y+")");
