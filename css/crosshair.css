@@ -50,3 +50,11 @@
   transition: all ease-in-out 0.2s;
   opacity: 0.5;
 }
+
+#demo {
+  display: block;
+  position: relative;
+  width: 620px;
+  height: 336px;
+  margin: 0 auto;
+}
