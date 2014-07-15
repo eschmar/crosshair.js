@@ -7,7 +7,9 @@ A jQuery plugin that let's you lay a crosshair over a dom element (for whatever 
 I needed a simple way of letting the user choose the most important part of an image as part of an app.
 
 ## demo
-<div id="demo-wrapper"><img id="demo-img" src="http://eschmar.github.io/crosshair.js/images/minions-ymca.jpg" alt="YMCA Minions - copyright universal pictures"></div>
+<div id="demo-wrapper">
+  ![YMCA Minions - copyright universal pictures](http://eschmar.github.io/crosshair.js/images/minions-ymca.jpg){: #demo-wrapper}
+</div>
 
 ## usage
 ```JavaScript
@@ -26,6 +28,7 @@ legend|boolean (true)|Show the current position of your mouse if hovering the el
 marker|string ('<div class="crosshair-marker"></div>')|Marker HTML template.
 callback|function(crosshair){}|This method will be triggered after you've clicked and the marker has been set. Access coordinates through `crosshair.coords` and  `crosshair.pct`.
 wrap|boolean (true)|Experimental switch to apply the crosshair directly on the chosen element if set to false.
+{: .table .table-striped}
 
 ## notes
 This is a first version and has only been tested on the latest version of Firefox (hence v0.1), as this was the only requirement for my use case. Hopefully it will be of use to somebody.
