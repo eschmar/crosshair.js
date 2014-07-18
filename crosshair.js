@@ -9,7 +9,7 @@
  
 ;(function ( $, window, document, undefined ) {
     // set default config
-    var coords, live_coords, pct, legend, marker, defaults = {
+    var coords, live_coords, pct, live_pct, legend, marker, defaults = {
         wrap: true,
         legend: true,
         marker: '<div class="crosshair-marker"></div>',
@@ -29,6 +29,7 @@
         this.coords = {x: null, y: null};
         this.live_coords = {x: null, y: null};
         this.pct = {x: null, y: null};
+        this.live_pct = {x: null, y: null};
         this.init();
     }
 
@@ -68,8 +69,8 @@
                 app.element.find('.hair.hair-vertical').css('left', left);
 
                 // convert to percentages
-                app.pct.x = ((100 / app.element.width())*app.live_coords.x).toFixed(2);
-                app.pct.y = ((100 / app.element.height())*app.live_coords.y).toFixed(2);
+                app.live_pct.x = ((100 / app.element.width())*app.live_coords.x).toFixed(2);
+                app.live_pct.y = ((100 / app.element.height())*app.live_coords.y).toFixed(2);
 
                 app.updateLegend();
                 event.stopPropagation();
@@ -93,7 +94,7 @@
                 this.legend = this.element.find('.crosshair-legend');
             };
 
-            this.legend.html('X: '+this.pct.x+'%, Y: '+this.pct.y+'%');
+            this.legend.html('X: '+this.live_pct.x+'%, Y: '+this.live_pct.y+'%');
         },
 
         setMarker: function() {
@@ -114,6 +115,10 @@
             // update coordinates
             this.coords.x = this.live_coords.x;
             this.coords.y = this.live_coords.y;
+
+            // update percentages
+            this.pct.x = ((100 / this.element.width())*this.coords.x).toFixed(2);
+            this.pct.y = ((100 / this.element.height())*this.coords.y).toFixed(2);
     
             // update marker position
             var width = this.marker.width();
