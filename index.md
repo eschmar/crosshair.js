@@ -10,6 +10,7 @@ I needed a simple way of letting the user choose the most important part of an i
 <div id="demo-wrapper">
   <img id="demo-img" src="http://eschmar.github.io/crosshair.js/images/minions-ymca.jpg" alt="YMCA Minions - copyright universal pictures">
 </div>
+<sup style="color: #D1DBE5;">copyright 2013 - Universal Pictures</sup>
 
 ## usage
 ~~~ javascript
